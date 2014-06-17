@@ -1,1 +1,9 @@
-testes git sublime
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		}
+	]
+}
