@@ -11,9 +11,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 369.0,
 		"selected_items":
 		[
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
 			[
 				"pack",
 				"Package Control: Remove Package"
@@ -43,7 +51,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 629.0
+		"width": 593.0
 	},
 	"console":
 	{
@@ -66,6 +74,12 @@
 	},
 	"file_history":
 	[
+		"/home/carlos/sublimeProjectGit/sublimeProjectGit.sublime-project",
+		"/home/carlos/testeclonegitlab/README.md",
+		"/home/carlos/testeclonegitlab/gitsublime/README.md",
+		"/home/carlos/testesgit/README.md",
+		"/home/carlos/testesgit/README",
+		"/home/carlos/gitlabtest1/README.md",
 		"/home/carlos/testessublime/README.md",
 		"/home/carlos/testessublime/novo ficheiro.html",
 		"/home/carlos/testessublime/outro.html",
@@ -77,7 +91,6 @@
 		"/home/carlos/.config/sublime-text-3/Packages/User/SideBarGit.sublime-settings",
 		"/home/carlos/.config/sublime-text-3/Packages/GitGutter/GitGutter.sublime-settings",
 		"/home/carlos/.config/sublime-text-3/Packages/SideBarGit/SideBarGit.sublime-settings",
-		"/home/carlos/testesgit/README",
 		"/home/carlos/testesgit/animals.txt",
 		"/home/carlos/testesgit/testesgit.sublime-project",
 		"/home/carlos/.config/sublime-text-3/Packages/User/Preferences.sublime-settings"
@@ -98,6 +111,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"aqui",
 			"GitLab",
 			"ssh",
 			"sublime"
@@ -158,11 +172,7 @@
 	{
 		"height": 0.0
 	},
-	"output.sftp":
-	{
-		"height": 0.0
-	},
-	"project": "testes_git_sublime.txt",
+	"project": "novo ficheiro.sublime-project",
 	"replace":
 	{
 		"height": 58.0
