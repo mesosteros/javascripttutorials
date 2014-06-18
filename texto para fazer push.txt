@@ -1,1 +1,3 @@
 Teste de confirmacao do push para o GitLab
+
+alterei para ver se continua a dar o warning
