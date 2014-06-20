@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 
 <head>
-<script src="/assets/jquery.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
-
+<script src="/assets/jquery.js"></script>
 <style>
 
 .robot {
@@ -20,6 +19,7 @@
   position: relative;
   left: 140px;
 }
+
 @keyframes blink {
   50% {
     background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
@@ -43,7 +43,6 @@
   -webkit-animation: blink .5s infinite;
   -moz-animation: blink .5s infinite;
 }
-
 .brain {
   background: radial-gradient(circle, white 15%, transparent 40%), #cc5;
   background: -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5; 
@@ -101,6 +100,30 @@
   top: -10px;
   z-index: -1;
 }
+@keyframes dance {
+  from {
+    left:800px;
+  }
+}
+@-webkit-keyframes dance {
+  from {
+    left:800px;
+  }
+}
+@-moz-keyframes dance {
+  from {
+    left:800px;
+  }
+}
+
+img {
+  animation: dance 4s infinite;
+  -webkit-animation: dance 4s infinite;
+  -moz-animation: dance 4s infinite;
+  position: absolute;
+  top: 200px;
+  left: 400px;
+}
 </style>
 </head>
 
@@ -115,20 +138,36 @@
   </div>
   <div class="foot"></div>
 </div>
+
 <button class="flash">laser eyes on/off</button>
 <button class="color">change color!</button>
+<button class="moves">break/dance</button>
+
+<img src="/assets/dance_cotter.gif">
+
 <script>
-// When eyes button is clicked, toggle laser class
-  $(".flash").click(function() {
+// When eyes button is clicked, toggle laser class on brain
+$(".flash").click(function() {
   $(".brain").toggleClass('laser');
-  });
-  // When color button is clicked, pick a number 0-255
-  $(".color").click(function() {
-    var red = Math.floor(Math.random() * 255);
-    var green = Math.floor(Math.random() * 255);
-    var blue = Math.floor(Math.random() * 255);
-    // Display the number in an alert window
-    //alert(red + "," + green + "," + blue);
-  });
+});
+
+// When color button is clicked...
+$(".color").click(function() {
+  // assign each named color a random number 0-255
+  var red = Math.floor(Math.random() * 255);
+  var green = Math.floor(Math.random() * 255);
+  var blue = Math.floor(Math.random() * 255);
+  
+  // Generate an RGBA value from red, green and blue
+  var randomRGBA = 'rgba(' +red+','+green+','+blue+',1)';
+  
+  // and change the body's background to our randowm color
+  $("body").css("background", randomRGBA);
+  //Display the three values in an alert window
+  //alert(randomRGBA);
+});
+$(".moves").click(function() {
+  $("img").toggle();
+});
 </script>
 </body>
