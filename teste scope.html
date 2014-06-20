@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+	
+</head>
+
+<body>
+	<script type="text/javascript">
+	var scope = "global scope"; // A global variable
+	function checkscope() {
+		var scope = "local scope"; // A local variable
+		function f() { document.write(scope + " <br />"); }
+		document.write(f() + " <br />");
+	}
+	checkscope();
+
+	var uniqueInteger = (function() { // Define and invoke
+									var counter = 0; // Private state of function below
+									document.write(function() 
+										{ 
+											document.write(counter++); 
+										});
+									}());
+
+	</script>
+</body>
