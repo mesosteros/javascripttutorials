@@ -8,11 +8,26 @@
 
 <body>
 <div class="prompt"></div>
+<button>Next</button>
 <script>
-  var prompts = ['Type your name', 'Type an adjective', 'Type a noun'];
-  //alert(prompts.length);
-  //alert(prompts[0]);
-  // Writes the array item
-  $('.prompt').html(prompts[2]);
+var prompts= [
+	'type your name',
+	'type an adjective',
+	'type a noun'
+];
+//Keep track of current prompt we're on
+var currentPrompt = 0;
+
+//A function that will call the next prompt
+var nextPrompt = function() {
+  //put first prompt in all html elements with class prompt
+  $('.prompt').html(prompts[currentPrompt]);
+  currentPrompt = currentPrompt + 1;
+}
+
+//run nextPrompt function when button is clicked
+$('button').click(function() {
+  nextPrompt();
+});
 </script>
 </body>
