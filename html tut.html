@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>
+		My First Website
+	</title>
+		<script>
+
+	  function getLocation()
+	    {
+	    if (navigator.geolocation)
+	      {
+	      navigator.geolocation.getCurrentPosition(showPosition);
+	      }
+	    else
+		  { 
+		  document.getElementById("html.net").innerHTML="Geolocation is not supported by this browser.";
+		  }
+	    }
+	    
+	function showPosition(position)  
+	  {
+	  var latlon=position.coords.latitude+","+position.coords.longitude;
+	  var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+	  +latlon+"&zoom=14&size=400x300&sensor=false";
+	  document.getElementById("html.net").innerHTML="<img src='"+img_url+"'>";
+	  }
+
+	</script>
+</head>
+<body>
+	<p>Hurrah! This is my website!</p>
+	<strong>Stronger emphasis</strong>
+	<small>Small text</small>
+	<br> (line break)
+	<hr> (horizontal rule)
+	<ul>List</ul>
+	<ol>Ordered list	
+		<li>List item</li>
+	</ol>
+	<table border="2">
+	  <tr>
+	    <td>Cell 1</td>
+	    <td>Cell 2</td>
+	  </tr>
+	  <tr>
+	    <td>Cell 3</td>
+	    <td>Cell 4</td>
+	  </tr>
+	</table>
+    <article> 		
+      <h1>My Blog Entry</h1> 		
+      <p>This blog entry is my first.</p>
+      <section> 			
+        <h2>What I Learned</h2>
+        <p>HTML5 can have articles and sections.</p>
+      </section>
+    </article> 
+    <button id="play1" onclick="play();">
+	  <p>butão</p>
+	</button> 
+<form action="output.htm" method="get">
+	  Name: <input type="text" name="name"><br>
+	  Country: <input type="text" list="country" name="countries">
+	   <datalist id="country">
+	    <option value="UK">
+	    <option value="Canada">
+	    <option value="USA">
+	    <option value="India">
+	    <option value="Brasil">
+	  </datalist>
+	  <br>
+  	  Gender: <br>  	
+	  <input type="radio" name="gender" value="Male"> Male<br>  	
+	  <input type="radio" name="gender" value="Female" checked="checked"> Female<br>   	
+	  <input type="submit" value="Submit"> 
+	</form>
+		<textarea rows="4" cols="50">Leave us some comments 
+	so we can improve this site!</textarea>
+	<br>
+	<select id = "myList">
+	  <option value = "1">one</option>
+	  <option value = "2">two</option>
+	  <option value = "3">three</option>
+	  <option value = "4">four</option>
+	</select>
+	<br>
+	Password: <input type="password"> 
+	<br>
+	<input autofocus="autofocus" type="text" list="country" name="countries">
+	<br>
+	<video width="320" height="240" controls>
+	  <source src="movie.mp4" type="video/mp4">
+	  Your browser does not support HTML5 videos. 
+	</video>
+
+	<br>
+	<br>
+	<p id="html.net">Where are you in the world?</p>
+	<button onclick="getLocation()">Get Coordinates</button>
+</body>
+<footer>
+	    <p> Copyright © 2013 All Rights</p>
+</footer>
+</html>

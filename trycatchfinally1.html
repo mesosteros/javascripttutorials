@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Understanding Try/Catch And Finally</title>
+    <p>First Name: <span id="fname"></span><br /> 
+    Last Name: <span id="lname"></span><br /> 
+    </p>  //json example
+ 
+    <script type="text/javascript">
+ 
+ 
+        // Execute a try/catch block with a finally.
+        try {
+ 
+            // Throw an error so the catch is triggered.
+            throw( new Error( "Blam!!!!" ) );
+ 
+        } catch( error ){
+ 
+            // Catch the error.
+            console.log( "Caught your error:", error.message );
+ 
+        } finally {
+ 
+            // Execute the clean-up code.
+            console.log( "Finally!" );
+ 
+        }
+ 
+        // We got past our try/catch.
+        console.log( "Back to safety." );
+        
+
+        //json example
+        var txt = '{ "employees" : [' +
+        '{ "firstName":"John" , "lastName":"Doe" },' +
+        '{ "firstName":"Anna" , "lastName":"Smith" },' +
+        '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+        
+        var obj = eval ("(" + txt + ")");
+
+        document.getElementById("fname").innerHTML = obj.employees[1].firstName;
+        document.getElementById("lname").innerHTML = obj.employees[1].lastName; 
+
+    </script>
+</head>
+<body>
+    <!-- Left intentionally blank. -->
+</body>
+</html>

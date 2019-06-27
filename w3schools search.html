@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Understanding search</title>
+</head>
+
+<body>
+
+	<p>Click the button to search a string for "blue", and display the position of the match.</p>
+
+	<button onclick="myFunction()">Try it</button>
+
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+	function myFunction() {
+	    var str = "Mr. Blue has a blue house"
+	    var n = str.search("blue");
+	    document.getElementById("demo").innerHTML = n;
+
+	}
+
+	var pattern = /Java/g;
+	var text = "JavaScript is more fun than Java!";
+	var result;
+	while((result = pattern.exec(text)) != null) {
+		document.write("Matched '" + result[0] + "'" +
+		" at position " + result.index +
+		"; next search at " + pattern.lastIndex + "<br>");
+	}
+	var pattern = /java/i;
+	console.log(pattern.test("JavaScript")); // Returns trues
+	var hoje = new Date(); 
+	document.write("<br>" + hoje);
+	</script>
+
+</body>
+</html>
